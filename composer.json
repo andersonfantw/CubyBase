@@ -1,0 +1,30 @@
+{
+    "name": "cuby/cubybase",
+    "description": "CubyBase package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anderson Fan",
+            "email": "andersonfantw@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Cubt\\CubyBase\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cuby\\CubyBase\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}
