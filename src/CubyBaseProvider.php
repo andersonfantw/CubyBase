@@ -12,9 +12,9 @@ class CubyBaseProvider extends ServiceProvider
      */
     public function boot()
     {
-//        $this->publishes([
-//            __DIR__.'/../config/phone.php' => config_path('CubyBase/phone.php'),
-//       ]);
+        $this->publishes([
+            __DIR__.'/../config/phone.php' => config_path('CubyBase/phone.php'),
+       ]);
     }
 
     public function register()
