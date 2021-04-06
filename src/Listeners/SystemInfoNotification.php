@@ -27,6 +27,6 @@ class SystemInfoNotification
      */
     public function handle(SystemInfoEvent $event)
     {
-        Log::info(springf('[%s][%s]%s - %s. %s',datetime('Y-m-d H:i:s'), $event->sender, $event->subject, $event->content, print_r($event->debug)));
+        Log::info(sprintf('[%s][%s]%s - %s. %s',datetime('Y-m-d H:i:s'), $event->sender, $event->subject, $event->content, print_r($event->debug)));
     }
 }
