@@ -27,6 +27,6 @@ class SystemWarningNotification
      */
     public function handle(SystemWarningEvent $event)
     {
-        Log::warning(sprintf('[%s][%s]%s - %s. %s',datetime('Y-m-d H:i:s'), $event->sender, $event->subject, $event->content, print_r($event->debug)));
+        Log::warning(sprintf('[%s][%s]%s - %s. %s',date('Y-m-d H:i:s'), $event->sender, $event->subject, $event->content, print_r($event->debug)));
     }
 }
