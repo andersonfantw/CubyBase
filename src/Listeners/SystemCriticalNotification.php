@@ -27,6 +27,6 @@ class SystemCriticalNotification
      */
     public function handle(SystemCriticalEvent $event)
     {
-        Log::critical(springf('[%s][%s]%s - %s. %s',datetime('Y-m-d H:i:s'), $event->sender, $event->subject, $event->content, print_r($event->debug)));
+        Log::critical(sprintf('[%s][%s]%s - %s. %s',datetime('Y-m-d H:i:s'), $event->sender, $event->subject, $event->content, print_r($event->debug)));
     }
 }
