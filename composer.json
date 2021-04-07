@@ -30,7 +30,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Cuby\\CubyBase\\CubyBaseProvider"
+                "CubyBase\\CubyBaseProvider"
             ]
         }
     }
