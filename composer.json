@@ -12,12 +12,12 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "cuby\\cubybase\\": "src"
+            "CubyBase\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "cuby\\cubybase\\Tests\\": "tests"
+            "CubyBase\\Tests\\": "tests"
         }
     },
     "scripts": {
