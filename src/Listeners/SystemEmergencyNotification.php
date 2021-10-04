@@ -27,6 +27,6 @@ class SystemEmergencyNotification
      */
     public function handle(SystemEmergencyEvent $event)
     {
-        Log::emergency(springf('[%s][%s]%s - %s. %s',datetime('Y-m-d H:i:s'), $event->sender, $event->subject, $event->content, print_r($event->debug)));
+        Log::emergency(sprintf('[%s][%s]%s - %s. %s',date('Y-m-d H:i:s'), $event->sender, $event->subject, $event->content, print_r($event->debug)));
     }
 }
