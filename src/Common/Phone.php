@@ -125,6 +125,22 @@ class Phone
             foreach($this->config as $k => $v){
                 if($this->_valid($phone_no,$k)) return true;
             }
+            switch(strlen($phone_no)){
+                case 11:
+                    $this->country = 'zh-cn';
+                    $this->zip = '86';
+                    $this->phone_no = $phone_no;
+                    $this->valid = true;
+                    return true;
+                case 10:
+                    if(substr($phone_no,0,2)!='09') return false;
+                case 9:
+                    $this->country = 'zh-tw';
+                    $this->zip = '886';
+                    $this->phone_no = $phone_no;
+                    $this->valid = true;
+                    return true;
+            }
             event(new SystemNoticeEvent('Phone','無效的電話號碼',sprintf('無法辨認的電話號碼格式 %s',$this->input),''));
             return false;
         }else{
